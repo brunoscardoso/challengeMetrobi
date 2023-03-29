@@ -14,6 +14,9 @@ function findDuplicate(items) {
   return result;
 }
 
+// This is a easy way to do that, i created the algorithm above with more complexity to exemplify how it is usually done under existing methods in languages.
+console.log(items.filter((item, index) => items.indexOf(item) !== index));
+
 console.log(findDuplicate(items));
 
 // Basically, i created a brute force solution where I check all items in the array for duplicate content and insert on new array with the result.

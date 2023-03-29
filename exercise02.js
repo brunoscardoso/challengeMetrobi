@@ -13,4 +13,8 @@ async function writeWithDelays(items) {
   }
 }
 
-console.log(writeWithDelays(items));
+function runAsync() {
+  return Promise.all([writeWithDelays(items), Promise.resolve()]);
+}
+
+runAsync().then(() => console.log("All calls completed."));
